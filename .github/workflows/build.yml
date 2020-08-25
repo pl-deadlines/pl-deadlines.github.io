@@ -1,0 +1,50 @@
+name: Build site
+
+on:
+  - push
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+        ocaml-version:
+          - 4.11.0
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Try to restore opam cache
+        id: opam-cache
+        uses: actions/cache@v2
+        with:
+          path: "~/.opam"
+          key: ${{ matrix.os }}-${{ matrix.ocaml-version }}
+
+      - name: Use OCaml ${{ matrix.ocaml-version }}
+        uses: avsm/setup-ocaml@v1
+        with:
+          ocaml-version: ${{ matrix.ocaml-version }}
+
+      - run: opam pin add pl-deadlines.dev . --no-action
+
+      - run: opam depext pl-deadlines --yes --with-doc --with-test
+
+      - run: opam install . --deps-only --with-doc --with-test
+
+      - run: opam exec -- make all
+
+      - run: mkdir docs
+
+      - run: mv pl-deadlines.js events.js all-tz.js index.html docs/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

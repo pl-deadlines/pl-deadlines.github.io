@@ -1,0 +1,65 @@
+{
+	"tags": [
+		"verification",
+		"security"
+	],
+	"conferences": [
+		{
+			"name": "Certified Programs and Proofs",
+			"abbrv": "CPP",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/CPP-2021",
+			"date": "Mon 18 - Tue 19 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-09-22T23:59:59-12:00",
+			"tags": ["verification"],
+			"notes": "Abstract submission deadline 16 September 2020. Collocated with POPL."
+		},
+		{
+			"name": "Symposium on Practical Aspects of Declarative Langauges",
+			"abbrv": "PADL",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/PADL-2021",
+			"date": "Mon 18 - Tue 19 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-10-09T23:59:59-12:00",
+			"tags": [],
+			"notes": "Collocated with POPL."
+		},
+    {
+			"name": "ACM SIGPLAN Symposium on Principles of Programming Languages",
+			"abbrv": "POPL",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org",
+			"date": "Sun 17 - Fri 22 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-07-09T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+    {
+			"name": "Conference on Verification, Model Checking, and Abstract Interpretation",
+			"abbrv": "VMCAI",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/VMCAI-2021",
+			"date": "Sun 17 - Tue 19 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-10-05T23:59:59-12:00",
+			"tags": [],
+			"notes": "Collocated with POPL."
+		}
+	],
+	"workshops": [
+		{
+			"name": "Workshop on Principles of Secure Compilation",
+			"abbrv": "PriSC",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/prisc-2021",
+			"date": "Sun 17 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-10-30T23:59:59-12:00",
+			"tags": ["security"],
+			"notes": "Collocated with POPL."
+		}
+	]
+}
