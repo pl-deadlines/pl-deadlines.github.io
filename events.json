@@ -16,7 +16,29 @@
 			"notes": "Abstract submission deadline 16 September 2020. Collocated with POPL."
 		},
 		{
-			"name": "Symposium on Practical Aspects of Declarative Langauges",
+			"name": "European Symposium on Programming",
+			"abbrv": "ESOP",
+			"year": "2021",
+			"url": "https://etaps.org/2021/esop",
+			"date": "27 Mar - 1 Apr 2021",
+			"location": "Luxembourg, Luxembourg",
+			"deadline": "2020-10-15T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+		{
+			"name": "ACM SIGPLAN International Conference on Functional Programming",
+			"abbrv": "ICFP",
+			"year": "2020",
+			"url": "https://icfp20.sigplan.org/",
+			"date": "Thu 20 - Fri 28 Aug 2020",
+			"location": "Online",
+			"deadline": "2020-03-03T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+		{
+			"name": "Symposium on Practical Aspects of Declarative Languages",
 			"abbrv": "PADL",
 			"year": "2021",
 			"url": "https://popl21.sigplan.org/home/PADL-2021",
@@ -26,7 +48,18 @@
 			"tags": [],
 			"notes": "Collocated with POPL."
 		},
-    {
+		{
+			"name": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+			"abbrv": "PLDI",
+			"year": "2020",
+			"url": "https://pldi20.sigplan.org/",
+			"date": "Wed 17 - Fri 19 Jun 2020",
+			"location": "Online",
+			"deadline": "2019-11-22T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+		{
 			"name": "ACM SIGPLAN Symposium on Principles of Programming Languages",
 			"abbrv": "POPL",
 			"year": "2021",
@@ -37,7 +70,7 @@
 			"tags": [],
 			"notes": ""
 		},
-    {
+		{
 			"name": "Conference on Verification, Model Checking, and Abstract Interpretation",
 			"abbrv": "VMCAI",
 			"year": "2021",
@@ -50,6 +83,28 @@
 		}
 	],
 	"workshops": [
+		{
+			"name": "Workshop on Languages for Inference",
+			"abbrv": "LAFI",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/lafi-2021",
+			"date": "Sun 17 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-10-16T23:59:59-12:00",
+			"tags": [],
+			"notes": "Collocated with POPL."
+		},
+		{
+			"name": "ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation",
+			"abbrv": "PEPM",
+			"year": "2021",
+			"url": "https://popl21.sigplan.org/home/pepm-2021",
+			"date": "Mon 18 - Tue 19 Jan 2021",
+			"location": "Copenhagen, Denmark and/or online",
+			"deadline": "2020-10-08T23:59:59-12:00",
+			"tags": [],
+			"notes": "Collocated with POPL."
+		},
 		{
 			"name": "Workshop on Principles of Secure Compilation",
 			"abbrv": "PriSC",

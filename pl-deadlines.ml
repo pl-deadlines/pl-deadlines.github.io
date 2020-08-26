@@ -126,7 +126,7 @@ let view { conf_visible; workshops_visible; tags; events_live; events_past } =
   div ~a:[class_ "container"]
     [ elt "h1" [text "Programming Languages Conferences Deadlines"]
         ~a:[class_ "title is-centered is-1"];
-      elt "p" [text "To add/update a deadline, ";
+      elt "p" [text "To add/update an event, ";
                elt "a" [text "send in a pull request"]
                  ~a:[str_prop "href" "https://github.com/pl-deadlines/pl-deadlines.github.io"];
                text "."
