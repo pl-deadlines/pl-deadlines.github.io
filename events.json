@@ -39,6 +39,17 @@
 			"notes": "Abstract submission deadline 16 September 2020. Collocated with POPL."
 		},
 		{
+			"name": "European Conference on Object Oriented Programming",
+			"abbrv": "ECOOP",
+			"year": "2020",
+			"url": "https://2020.ecoop.org/",
+			"date": "Sun 15 Nov - Tue 17 Nov 2020",
+			"location": "Online",
+			"deadline": "2020-01-10T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+		{
 			"name": "European Symposium on Programming",
 			"abbrv": "ESOP",
 			"year": "2021",
@@ -57,6 +68,17 @@
 			"date": "Thu 20 - Fri 28 Aug 2020",
 			"location": "Online",
 			"deadline": "2020-03-03T23:59:59-12:00",
+			"tags": [],
+			"notes": ""
+		},
+		{
+			"name": "Object-oriented Programming, Systems, Languages, and Applications",
+			"abbrv": "OOPSLA",
+			"year": "2020",
+			"url": "https://2020.splashcon.org/track/splash-2020-oopsla",
+			"date": "Sun 15 - Fri 20 Nov 2020",
+			"location": "Online",
+			"deadline": "2020-05-15T23:59:59-12:00",
 			"tags": [],
 			"notes": ""
 		},
