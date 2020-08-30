@@ -138,6 +138,8 @@ let view { conf_visible; workshops_visible; tags; events_live; events_past } =
         ];
       elt "p" [] ~a:[class_ "pb-6"];
       render_events conf_visible workshops_visible tags events_live;
+      div ~a:[class_ "divider"]
+      	[text "Past events"];
       render_events conf_visible workshops_visible tags events_past
     ]
 
