@@ -20,21 +20,29 @@ type event =
     deadline: Time_ns.t;
     tags: string list;
     notes: string;
-    is_conf: bool
+    is_conf: bool;
+    ical: string
   }
 
 let parse_event b v =
+  let abbrv = Ezjsonm.find v ["abbrv"] |> Ezjsonm.get_string in
+  let year = Ezjsonm.find v ["year"] |> Ezjsonm.get_string in
+  let deadline = Ezjsonm.find v ["deadline"] |> Ezjsonm.get_string |> Time_ns.of_string in
+  let (day, ofday) = deadline |> Time_ns.to_date_ofday ~zone:Time.Zone.utc in
+  let ofdayparts = Time_ns.Ofday.to_parts ofday in
+  let dtstart = (Core_kernel__Date0.to_string_iso8601_basic day) ^ "T" ^ (string_of_int ofdayparts.hr) ^ (string_of_int ofdayparts.min) ^ (string_of_int ofdayparts.sec) ^ "Z"in
   {
     name = Ezjsonm.find v ["name"] |> Ezjsonm.get_string;
-    abbrv = Ezjsonm.find v ["abbrv"] |> Ezjsonm.get_string;
-    year = Ezjsonm.find v ["year"] |> Ezjsonm.get_string;
+    abbrv = abbrv;
+    year = year;
     url = Ezjsonm.find v ["url"] |> Ezjsonm.get_string;
     date = Ezjsonm.find v ["date"] |> Ezjsonm.get_string;
     location = Ezjsonm.find v ["location"] |> Ezjsonm.get_string;
-    deadline = Ezjsonm.find v ["deadline"] |> Ezjsonm.get_string |> Time_ns.of_string;
+    deadline = deadline;
     tags = Ezjsonm.find v ["tags"] |> Ezjsonm.get_strings;
     notes = Ezjsonm.find v ["notes"] |> Ezjsonm.get_string;
-    is_conf = b
+    is_conf = b;
+    ical = "data:text/calendar,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:" ^ dtstart ^ "%0ADTEND:" ^ dtstart ^ "%0ASUMMARY:" ^ abbrv ^ "%20" ^ year ^ "%20deadline%0ADESCRIPTION:%0ALOCATION:%0AEND:VEVENT%0AEND:VCALENDAR"
   }
 
 let confs =
@@ -113,6 +121,10 @@ let render_event conf_visible workshops_visible tags event =
          [elt "p" [text (Time_ns.diff event.deadline (Time_ns.now ()) |> Time_ns.Span.to_string)]
             ~a:[class_ "has-text-weight-bold is-size-2"];
           elt "p" [text ("Deadline: " ^ (event.deadline |> Time_ns.to_string_abs_trimmed ~zone:(Lazy.force (Timezone.local))))];
+          elt "p" [elt "span" [elt "ion-icon" [] ~a:[attr "name" "calendar-outline"]]
+                     ~a:[class_ "icon"];
+                   elt "a" [text "iCal"]
+                     ~a:[attr "href" event.ical]];
           elt "p" [text (if List.is_empty event.tags then "" else ("Tags: " ^ (if List.length event.tags > 1 then List.fold (List.tl_exn event.tags) ~init:(List.hd_exn event.tags) ~f:(fun a b -> a ^ ", " ^ b) else List.hd_exn event.tags)))]
          ]
       ]
