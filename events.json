@@ -63,11 +63,11 @@
 		{
 			"name": "ACM SIGPLAN International Conference on Functional Programming",
 			"abbrv": "ICFP",
-			"year": "2020",
-			"url": "https://icfp20.sigplan.org/",
-			"date": "Thu 20 - Fri 28 Aug 2020",
-			"location": "Online",
-			"deadline": "2020-03-03T23:59:59-12:00",
+			"year": "2021",
+			"url": "https://icfp21.sigplan.org/",
+			"date": "Sun 22 - Fri 27 August",
+			"location": "Daejon, South Korea or online",
+			"deadline": "2021-03-02T23:59:59-12:00",
 			"tags": [],
 			"notes": ""
 		},
